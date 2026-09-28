@@ -1,0 +1,46 @@
+[
+    {
+        "item_type": "Bottle",
+        "color": "blue",
+        "brand": "",
+        "location": "Canteen",
+        "date": "2026-09-22",
+        "description": "i found a silver bottle near canteen",
+        "name": "bala",
+        "status": "found",
+        "id": 1
+    },
+    {
+        "item_type": "Bottle",
+        "color": "silver",
+        "brand": "",
+        "location": "Library",
+        "date": "2026-09-22",
+        "name": "miru",
+        "description": "i found a silver bottle near library",
+        "status": "Found",
+        "id": 2
+    },
+    {
+        "item_type": "Bottle",
+        "color": "blue",
+        "brand": "",
+        "location": "Library",
+        "date": "2026-09-22",
+        "name": "kaviya",
+        "description": "i found blue bottle near library",
+        "status": "Claimed",
+        "id": 3
+    },
+    {
+        "item_type": "Phone",
+        "color": "white",
+        "brand": "vivo",
+        "location": "Library",
+        "date": "2026-09-29",
+        "name": "pavi",
+        "description": "jhgfj",
+        "status": "Claimed",
+        "id": 4
+    }
+]

@@ -1,0 +1,24 @@
+[
+    {
+        "item_type": "Bottle",
+        "color": "blue",
+        "brand": "",
+        "location": "Library",
+        "date": "2026-09-22",
+        "description": "Silver water bottle , i have kept in library but after when i reach again, my bottle had lost",
+        "name": "Pavi",
+        "status": "lost",
+        "id": 1
+    },
+    {
+        "item_type": "Phone",
+        "color": "white",
+        "brand": "vivo",
+        "location": "Canteen",
+        "date": "2026-09-29",
+        "name": "nandha",
+        "description": "fdytfr",
+        "status": "Lost",
+        "id": 2
+    }
+]
