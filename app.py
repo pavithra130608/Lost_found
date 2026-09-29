@@ -708,6 +708,21 @@ elif page == "Report Lost":
                 placeholder="Enter your name"
             )
 
+            phone = st.text_input(
+                "Phone Number",
+                placeholder="Enter your phone number"
+            )
+
+            email = st.text_input(
+                "Email Address",
+                placeholder="Enter your email address"
+            )
+
+            class_details = st.text_input(
+                "Class Details",
+                placeholder="Example: B.Sc Computer Science, Year 2"
+            )
+
             description = st.text_area(
                 "Description",
                 placeholder=(
@@ -729,6 +744,24 @@ elif page == "Report Lost":
                 "Please enter your name."
             )
 
+        elif not phone.strip():
+
+            st.warning(
+                "Please enter your phone number."
+            )
+
+        elif not email.strip() or "@" not in email.strip():
+
+            st.warning(
+                "Please enter a valid email address."
+            )
+
+        elif not class_details.strip():
+
+            st.warning(
+                "Please enter your class details."
+            )
+
         elif not description.strip():
 
             st.warning(
@@ -744,6 +777,9 @@ elif page == "Report Lost":
                 "location": location,
                 "date": str(lost_date),
                 "name": name.strip(),
+                "phone": phone.strip(),
+                "email": email.strip(),
+                "class_details": class_details.strip(),
                 "description": description.strip(),
                 "status": "Lost"
             }
@@ -836,6 +872,21 @@ elif page == "Report Found":
                 placeholder="Enter your name"
             )
 
+            phone = st.text_input(
+                "Phone Number",
+                placeholder="Enter your phone number"
+            )
+
+            email = st.text_input(
+                "Email Address",
+                placeholder="Enter your email address"
+            )
+
+            class_details = st.text_input(
+                "Class Details",
+                placeholder="Example: B.Sc Computer Science, Year 2"
+            )
+
             description = st.text_area(
                 "Description",
                 placeholder=(
@@ -857,6 +908,24 @@ elif page == "Report Found":
                 "Please enter your name."
             )
 
+        elif not phone.strip():
+
+            st.warning(
+                "Please enter your phone number."
+            )
+
+        elif not email.strip() or "@" not in email.strip():
+
+            st.warning(
+                "Please enter a valid email address."
+            )
+
+        elif not class_details.strip():
+
+            st.warning(
+                "Please enter your class details."
+            )
+
         elif not description.strip():
 
             st.warning(
@@ -872,6 +941,9 @@ elif page == "Report Found":
                 "location": location,
                 "date": str(found_date),
                 "name": name.strip(),
+                "phone": phone.strip(),
+                "email": email.strip(),
+                "class_details": class_details.strip(),
                 "description": description.strip(),
                 "status": "Found"
             }
@@ -1306,6 +1378,21 @@ elif page == "Reports":
                     )
 
                     st.write(
+                        f"**Phone:** "
+                        f"{lost.get('phone') or 'Not provided'}"
+                    )
+
+                    st.write(
+                        f"**Email:** "
+                        f"{lost.get('email') or 'Not provided'}"
+                    )
+
+                    st.write(
+                        f"**Class Details:** "
+                        f"{lost.get('class_details') or 'Not provided'}"
+                    )
+
+                    st.write(
                         f"**Description:** "
                         f"{lost.get('description', '')}"
                     )
@@ -1397,6 +1484,21 @@ elif page == "Reports":
                     st.write(
                         f"**Reported by:** "
                         f"{found.get('name', '')}"
+                    )
+
+                    st.write(
+                        f"**Phone:** "
+                        f"{found.get('phone') or 'Not provided'}"
+                    )
+
+                    st.write(
+                        f"**Email:** "
+                        f"{found.get('email') or 'Not provided'}"
+                    )
+
+                    st.write(
+                        f"**Class Details:** "
+                        f"{found.get('class_details') or 'Not provided'}"
                     )
 
                     st.write(
