@@ -56,7 +56,7 @@ The application provides an interface for viewing and managing item reports.
 
 The architecture diagram illustrates the main components of the application and how the user interface, matching algorithms, image processing, and data storage work together.
 
-![System Architecture](Architecuture.png)
+![System Architecture](Architecutre.png)
 
 ## 🎯 Objectives
 
