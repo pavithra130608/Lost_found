@@ -1,48 +1,44 @@
 import json
 
-from ai.fuzzy_match import calculate_match_score
-from ai.rules import apply_rules
+from ai.item_match import find_item_matches
 
 
-# Load real lost items
-with open("data/lost_items.json", "r") as file:
-    lost_items = json.load(file)
+def main():
+    with open("data/lost_items.json", "r", encoding="utf-8") as file:
+        lost_items = json.load(file)
 
-# Load real found items
-with open("data/found_items.json", "r") as file:
-    found_items = json.load(file)
+    with open("data/found_items.json", "r", encoding="utf-8") as file:
+        found_items = json.load(file)
+
+    print("===== LOST AND FOUND MATCHING CHECK =====")
+    print("Lost Items:", len(lost_items))
+    print("Found Items:", len(found_items))
+
+    for lost in lost_items:
+        matches, rejected = find_item_matches(lost, found_items)
+        print("\n----------------------------------------")
+        print(f"Lost Report {lost.get('id')}: {lost.get('item_type')}")
+        print("Description:", lost.get("description", ""))
+
+        if matches:
+            for match in matches:
+                found = match["found"]
+                print(
+                    f"Candidate Report {found.get('id')}: "
+                    f"{found.get('item_type')} "
+                    f"({match['score']:.0f}/100)"
+                )
+                for reason in match["reasons"]:
+                    print("  -", reason)
+        else:
+            print("No credible candidate matches.")
+
+        for entry in rejected:
+            found = entry["found"]
+            print(f"Rejected Report {found.get('id')}: {found.get('item_type')}")
+            for reason in entry["reasons"]:
+                print("  -", reason)
 
 
-print("===== AI LOST & FOUND MATCHING TEST =====")
-
-print("Lost Items:", len(lost_items))
-print("Found Items:", len(found_items))
-
-
-# Compare every lost item with every found item
-for lost in lost_items:
-
-    print("\n----------------------------------------")
-    print("Lost Item ID:", lost["id"])
-    print("Item:", lost["item_type"])
-    print("Description:", lost["description"])
-
-    for found in found_items:
-
-        score = calculate_match_score(lost, found)
-
-        result, reasons = apply_rules(
-            lost,
-            found,
-            score
-        )
-
-        print("\nFound Item ID:", found["id"])
-        print("Found Description:", found["description"])
-        print("Match Score:", score)
-        print("Result:", result)
-
-        if reasons:
-            print("Reasons:")
-            for reason in reasons:
-                print("  ✓", reason)
+if __name__ == "__main__":
+    main()

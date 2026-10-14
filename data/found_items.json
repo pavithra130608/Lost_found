@@ -7,7 +7,7 @@
         "date": "2026-09-22",
         "description": "i found a silver bottle near canteen",
         "name": "bala",
-        "status": "found",
+        "status": "Claimed",
         "id": 1
     },
     {
@@ -42,5 +42,65 @@
         "description": "jhgfj",
         "status": "Claimed",
         "id": 4
+    },
+    {
+        "item_type": "Phone",
+        "color": "white",
+        "brand": "samsung",
+        "location": "Auditorium",
+        "date": "2026-09-29",
+        "name": "Pavithra",
+        "phone": "9834679099",
+        "email": "71762305106@cit.edu.in",
+        "class_details": "4th year cse-2",
+        "description": "sqw",
+        "image_path": "data/item_images/cd61a0484b8543b49b32fe0f3f7f03f1.jpg",
+        "status": "Claimed",
+        "id": 5
+    },
+    {
+        "item_type": "Bottle",
+        "color": "blue",
+        "brand": "a1",
+        "location": "Canteen",
+        "date": "2026-09-29",
+        "name": "shyam",
+        "phone": "768934568",
+        "email": "71762305120@cit.edu.in",
+        "class_details": "4th year",
+        "description": "as",
+        "image_path": "data/item_images/a55549b6cc2941f39daca0545e45c695.jpg",
+        "status": "Claimed",
+        "id": 6
+    },
+    {
+        "item_type": "Backpack",
+        "color": "blue",
+        "brand": "",
+        "location": "Library",
+        "date": "2026-10-11",
+        "name": "bala",
+        "phone": "9023567890",
+        "email": "71762305198@cit.edu.in",
+        "class_details": "final year IT",
+        "description": "i have found this item its with me now",
+        "image_path": "",
+        "status": "Found",
+        "id": 7
+    },
+    {
+        "item_type": "watch",
+        "color": "Black",
+        "brand": "Sonata",
+        "location": "Library",
+        "date": "2026-10-13",
+        "name": "Pavithra",
+        "phone": "6390638945",
+        "email": "pavithar.06@gmail.com",
+        "class_details": "B.E CSE",
+        "description": "the watch was found at library block",
+        "status": "Claimed",
+        "image_path": "data/item_images/45f3201f4cc44f02867e72e93c51222b.jpg",
+        "id": 8
     }
 ]
